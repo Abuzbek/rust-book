@@ -67,6 +67,38 @@ fn control_flow() {
     } else {
         println!("condition was false");
     }
+
+    let num = if true { 5 } else { 6 };
+    println!("{}", num);
+
+    // loop
+    let mut counter = 0; 
+    let _result = loop {
+        counter += 1;
+        if counter == 10 {
+            break counter;
+        }
+    };
+
+    // while
+    let mut number = 3;
+    while number != 0 {
+        println!("{}", number);
+        number -= 1;
+    }
+    println!("LIFTOFF!!!");
+
+    // for
+
+    let a = [10,20,30,40,50];
+    for element in a.iter() {
+        println!("{}", element);
+    };
+
+    for number in 1..10 {
+        println!("{}", number);
+    };
+
 }
 
 fn main() {
@@ -82,4 +114,9 @@ fn main() {
     compond_types();
     let _sum = my_function(12, 43);
     control_flow();
+
+    // Line comment
+    /*
+        Block comment
+    */
 }
